@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Service Records | Ondo State LGPT</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/line-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/kyc-1.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/lgpt-forms.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/Flag_of_Ondo_State.png">
+</head>
+<body>
+  <div class="ugf-nav">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="navigation">
+            <div class="logo">
+              <img src="images/Flag_of_Ondo_State.png" class="img-fluid" alt="LGPT Logo" style="height: 40px;">
+              <a href="index.html"><span>ONDO STATE LGPT</span></a>
+            </div>
+            <div class="nav-btns">
+              <a href="index.html" class="back"><span class="text">← Back to Home</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ugf-bg ufg-main-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2 p-sm-0">
+          <div class="lgpt-progress-steps" id="normalSteps">
+            <div class="lgpt-step completed">
+              <div class="lgpt-step-number">✓</div>
+              <div class="lgpt-step-label">Personal Details</div>
+            </div>
+            <div class="lgpt-step completed">
+              <div class="lgpt-step-number">✓</div>
+              <div class="lgpt-step-label">Contact Info</div>
+            </div>
+            <div class="lgpt-step active">
+              <div class="lgpt-step-number">3</div>
+              <div class="lgpt-step-label">Service Records</div>
+            </div>
+            <div class="lgpt-step">
+              <div class="lgpt-step-number">4</div>
+              <div class="lgpt-step-label">Documents</div>
+            </div>
+          </div>
+          <div class="lgpt-progress-steps" id="shareSteps" style="display: none;">
+            <div class="lgpt-step completed">
+              <div class="lgpt-step-number">✓</div>
+              <div class="lgpt-step-label">Personal Details</div>
+            </div>
+            <div class="lgpt-step active">
+              <div class="lgpt-step-number">2</div>
+              <div class="lgpt-step-label">Documents</div>
+            </div>
+            <div class="lgpt-step">
+              <div class="lgpt-step-number">3</div>
+              <div class="lgpt-step-label">Confirmation</div>
+            </div>
+          </div>
+          <div class="ugf-form">
+            <div class="text-center">
+              <span class="pension-type-badge" id="pensionTypeBadge">Normal Pensioner</span>
+            </div>
+            <form action="#" id="serviceRecordsForm" method="get">
+              <div id="serviceRecordsSection">
+                <div class="input-block">
+                  <h4>Employment Details</h4>
+                  <p>Provide your service record information</p>
+                  <div class="row">
+                    <div class="col-md-6 p-sm-0">
+                      <div class="form-group">
+                        <label for="officeHeld">Office Held in Public Service *</label>
+                        <input type="text" name="office_held" class="form-control" id="officeHeld" placeholder="e.g. Administrative Officer" required>
+                      </div>
+                    </div>
+                    <div class="col-md-6 p-sm-0">
+                      <div class="form-group">
+                        <label for="titleOfOffice">Title of Office *</label>
+                        <input type="text" name="title_of_office" class="form-control" id="titleOfOffice" placeholder="e.g. Senior Administrative Officer" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>Was this an established office? *</label>
+                    <div class="d-flex gap-3 mt-2" style="gap: 20px;">
+                      <label style="display: flex; align-items: center; cursor: pointer;">
+                        <input type="radio" name="is_established_office" value="yes" required style="margin-right: 8px;"> Yes
+                      </label>
+                      <label style="display: flex; align-items: center; cursor: pointer;">
+                        <input type="radio" name="is_established_office" value="no" style="margin-right: 8px;"> No
+                      </label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4 p-sm-0">
+                      <div class="form-group">
+                        <label for="dateCommencement">Date of Commencement *</label>
+                        <input type="date" name="date_of_commencement" class="form-control" id="dateCommencement" required>
+                      </div>
+                    </div>
+                    <div class="col-md-4 p-sm-0">
+                      <div class="form-group">
+                        <label for="dateConfirmation">Date of Confirmation *</label>
+                        <input type="date" name="date_of_confirmation" class="form-control" id="dateConfirmation" required>
+                      </div>
+                    </div>
+                    <div class="col-md-4 p-sm-0">
+                      <div class="form-group">
+                        <label for="dateTermination">Date of Termination *</label>
+                        <input type="date" name="date_of_termination" class="form-control" id="dateTermination" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 p-sm-0">
+                      <div class="form-group">
+                        <label for="retirementReason">Reason for Retirement *</label>
+                        <select class="form-control" id="retirementReason" name="retirement_reason" required>
+                          <option value="">Select Reason</option>
+                          <option value="age">Statutory Age Limit</option>
+                          <option value="service">Length of Service</option>
+                          <option value="voluntary">Voluntary Retirement</option>
+                          <option value="medical">Medical Grounds</option>
+                          <option value="abolition">Abolition of Office</option>
+                          <option value="other">Other</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6 p-sm-0">
+                      <div class="form-group">
+                        <label for="terminalSalary">Terminal Salary (₦) *</label>
+                        <input type="number" name="terminal_salary" class="form-control" id="terminalSalary" placeholder="e.g. 150000" required>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-block">
+                  <h4>Total Length of Service</h4>
+                  <div class="row">
+                    <div class="col-md-4 p-sm-0">
+                      <div class="form-group">
+                        <label for="serviceYears">Years *</label>
+                        <input type="number" name="total_service_years" class="form-control" id="serviceYears" placeholder="0" min="0" max="45" required>
+                      </div>
+                    </div>
+                    <div class="col-md-4 p-sm-0">
+                      <div class="form-group">
+                        <label for="serviceMonths">Months *</label>
+                        <input type="number" name="total_service_months" class="form-control" id="serviceMonths" placeholder="0" min="0" max="11" required>
+                      </div>
+                    </div>
+                    <div class="col-md-4 p-sm-0">
+                      <div class="form-group">
+                        <label for="serviceDays">Days *</label>
+                        <input type="number" name="total_service_days" class="form-control" id="serviceDays" placeholder="0" min="0" max="30" required>
+                      </div>
+                    </div>
+                  </div>
+                  <h5 style="font-size: 14px; color: #718096; margin-top: 16px;">Leave Without Pay (if any)</h5>
+                  <div class="row">
+                    <div class="col-md-4 p-sm-0">
+                      <div class="form-group">
+                        <label for="leaveYears">Years</label>
+                        <input type="number" name="leave_without_pay_years" class="form-control" id="leaveYears" placeholder="0" min="0" max="45">
+                      </div>
+                    </div>
+                    <div class="col-md-4 p-sm-0">
+                      <div class="form-group">
+                        <label for="leaveMonths">Months</label>
+                        <input type="number" name="leave_without_pay_months" class="form-control" id="leaveMonths" placeholder="0" min="0" max="11">
+                      </div>
+                    </div>
+                    <div class="col-md-4 p-sm-0">
+                      <div class="form-group">
+                        <label for="leaveDays">Days</label>
+                        <input type="number" name="leave_without_pay_days" class="form-control" id="leaveDays" placeholder="0" min="0" max="30">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 p-sm-0">
+                      <div class="form-group">
+                        <label for="pensionCommencementDate">Pension Commencement Date *</label>
+                        <input type="date" name="pension_commencement_date" class="form-control" id="pensionCommencementDate" required>
+                      </div>
+                    </div>
+                    <div class="col-md-6 p-sm-0">
+                      <div class="form-group">
+                        <label for="gratuityDate">Gratuity Entitlement Date *</label>
+                        <input type="date" name="gratuity_entitlement_date" class="form-control" id="gratuityDate" required>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="documentUploadSection" style="display: none;">
+                <div class="input-block">
+                  <h4>Upload Required Documents</h4>
+                  <p>Please upload clear copies of your documents</p>
+                  <div class="file-input-wrap">
+                    <div class="custom-file">
+                      <input type="file" name="doc1" class="custom-file-input" id="upload-input-1" accept="image/*,.pdf" onchange="previewFile(event, 1)">
+                      <label class="custom-file-label" for="upload-input-1">
+                        <img src="assets/images/cloud.png" class="upload-icon" alt="">
+                      </label>
+                      <span class="text">ID Document</span>
+                    </div>
+                    <div class="custom-file">
+                      <input type="file" name="doc2" class="custom-file-input" id="upload-input-2" accept="image/*,.pdf" onchange="previewFile(event, 2)">
+                      <label class="custom-file-label" for="upload-input-2">
+                        <img src="assets/images/cloud.png" class="upload-icon" alt="">
+                      </label>
+                      <span class="text">Passport Photo</span>
+                    </div>
+                    <div class="custom-file">
+                      <input type="file" name="doc3" class="custom-file-input" id="upload-input-3" accept="image/*,.pdf" onchange="previewFile(event, 3)">
+                      <label class="custom-file-label" for="upload-input-3">
+                        <img src="assets/images/cloud.png" class="upload-icon" alt="">
+                      </label>
+                      <span class="text">Other Document</span>
+                    </div>
+                  </div>
+                  <div class="conditions">
+                    <ul>
+                      <li class="complete">File format: JPEG, PNG, or PDF (Max: 2MB)</li>
+                      <li>Documents should be clear and legible</li>
+                      <li>Documents must be valid and not expired</li>
+                      <li>All required documents must be uploaded</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn" id="submitBtn">Continue to Document Upload &nbsp; →</button>
+              <a href="kyc2.html" class="back-to-prev" id="backLink"><img src="assets/images/arrow-left-grey.png" alt=""> Back to Previous</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/jquery.validate.min.js"></script>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const pensionType = urlParams.get('type') || 'normal';
+    const typeLabels = {
+      'normal': 'Normal Pensioner',
+      'local-share': 'Local Share',
+      'state-share': 'State Share',
+      'federal-share': 'Federal Share'
+    };
+    document.getElementById('pensionTypeBadge').textContent = typeLabels[pensionType] || 'Normal Pensioner';
+    // Show appropriate section based on pension type
+    if (pensionType !== 'normal') {
+      document.getElementById('normalSteps').style.display = 'none';
+      document.getElementById('shareSteps').style.display = 'flex';
+      document.getElementById('serviceRecordsSection').style.display = 'none';
+      document.getElementById('documentUploadSection').style.display = 'block';
+      document.getElementById('submitBtn').textContent = 'Continue to Confirmation  →';
+      document.getElementById('backLink').href = 'kyc.html?type=' + pensionType;
+    }
+    document.getElementById("serviceRecordsForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const saved = JSON.parse(localStorage.getItem("lgptFormData")) || {};
+      if (pensionType === 'normal') {
+        saved.office_held = document.getElementById("officeHeld").value;
+        saved.title_of_office = document.getElementById("titleOfOffice").value;
+        saved.is_established_office = document.querySelector('input[name="is_established_office"]:checked')?.value;
+        saved.date_of_commencement = document.getElementById("dateCommencement").value;
+        saved.date_of_confirmation = document.getElementById("dateConfirmation").value;
+        saved.date_of_termination = document.getElementById("dateTermination").value;
+        saved.retirement_reason = document.getElementById("retirementReason").value;
+        saved.terminal_salary = document.getElementById("terminalSalary").value;
+        saved.total_service_years = document.getElementById("serviceYears").value;
+        saved.total_service_months = document.getElementById("serviceMonths").value;
+        saved.total_service_days = document.getElementById("serviceDays").value;
+        saved.leave_without_pay_years = document.getElementById("leaveYears").value;
+        saved.leave_without_pay_months = document.getElementById("leaveMonths").value;
+        saved.leave_without_pay_days = document.getElementById("leaveDays").value;
+        saved.pension_commencement_date = document.getElementById("pensionCommencementDate").value;
+        saved.gratuity_entitlement_date = document.getElementById("gratuityDate").value;
+        localStorage.setItem("lgptFormData", JSON.stringify(saved));
+        window.location.href = "kyc4.html?type=" + pensionType; // Go to document upload
+      } else {
+        // Share-based: go to confirmation
+        localStorage.setItem("lgptFormData", JSON.stringify(saved));
+        window.location.href = "kyc-complete.html?type=" + pensionType;
+      }
+    });
+    function previewFile(event, index) {
+      const file = event.target.files[0];
+      if (file) {
+        const label = document.querySelector(`label[for="upload-input-${index}"]`);
+        label.innerHTML = `<span style="color: #38a169; font-size: 24px;">✓</span>`;
+      }
+    }
+  </script>
+</body>
+</html>

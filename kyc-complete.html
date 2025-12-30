@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Application Submitted | Ondo State LGPT</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/line-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/kyc-1.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/lgpt-forms.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/Flag_of_Ondo_State.png">
+  <style>
+    .success-container {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #f8f5f0 0%, #fff 100%);
+    }
+    .success-card {
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+      padding: 60px 48px;
+      text-align: center;
+      max-width: 500px;
+      margin: 20px;
+    }
+    .success-icon {
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(135deg, #38a169 0%, #2f855a 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 48px;
+      color: #fff;
+    }
+    .success-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1a202c;
+      margin-bottom: 12px;
+    }
+    .success-message {
+      font-size: 16px;
+      color: #4a5568;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .reference-box {
+      background: #fff4eb;
+      border: 2px dashed #e65c00;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 32px;
+    }
+    .reference-label {
+      font-size: 12px;
+      color: #718096;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+    .reference-number {
+      font-size: 24px;
+      font-weight: 700;
+      color: #e65c00;
+      font-family: 'Courier New', monospace;
+    }
+    .info-list {
+      text-align: left;
+      list-style: none;
+      padding: 0;
+      margin: 0 0 32px 0;
+    }
+    .info-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      color: #4a5568;
+    }
+    .info-list li:last-child {
+      border-bottom: none;
+    }
+    .info-list li span {
+      margin-right: 12px;
+      font-size: 18px;
+    }
+    .btn-home {
+      display: inline-block;
+      background: linear-gradient(135deg, #e65c00 0%, #cc5200 100%);
+      color: #fff;
+      padding: 16px 40px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .btn-home:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(230, 92, 0, 0.3);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="success-container">
+    <div class="success-card">
+      <div class="success-icon">✓</div>
+      <h1 class="success-title">Application Submitted!</h1>
+      <p class="success-message">
+        Your pension application has been successfully submitted. Please save your reference number for tracking purposes.
+      </p>
+      <div class="reference-box">
+        <div class="reference-label">Reference Number</div>
+        <div class="reference-number" id="referenceNumber">LGPT-2024-XXXXXX</div>
+      </div>
+      <ul class="info-list">
+        <li><span>📧</span> A confirmation email has been sent to your registered email</li>
+        <li><span>📞</span> For inquiries, call: 0800-LGPT-HELP</li>
+        <li><span>⏱️</span> Processing time: 7-14 working days</li>
+        <li><span>📋</span> You may be contacted for additional documents</li>
+      </ul>
+      <a href="index.html" class="btn-home">Return to Homepage</a>
+    </div>
+  </div>
+  <script>
+    // Generate reference number
+    function generateReference() {
+      const date = new Date();
+      const year = date.getFullYear();
+      const random = Math.floor(100000 + Math.random() * 900000);
+      return `LGPT-${year}-${random}`;
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('referenceNumber').textContent = generateReference();
+      // Clear form data after successful submission
+      localStorage.removeItem('lgptFormData');
+    });
+  </script>
+</body>
+</html>

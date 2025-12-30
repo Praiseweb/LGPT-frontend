@@ -1,0 +1,149 @@
+  <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Upload Documents | Ondo State LGPT</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/line-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/kyc-1.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/lgpt-forms.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/Flag_of_Ondo_State.png">
+</head>
+<body>
+  <div class="ugf-nav">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="navigation">
+            <div class="logo">
+              <img src="images/Flag_of_Ondo_State.png" class="img-fluid" alt="LGPT Logo" style="height: 40px;">
+              <a href="index.html"><span>ONDO STATE LGPT</span></a>
+            </div>
+            <div class="nav-btns">
+              <a href="index.html" class="back"><span class="text">← Back to Home</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ugf-bg ufg-main-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2 p-sm-0">
+          <div class="lgpt-progress-steps">
+            <div class="lgpt-step completed">
+              <div class="lgpt-step-number">✓</div>
+              <div class="lgpt-step-label">Personal Details</div>
+            </div>
+            <div class="lgpt-step completed">
+              <div class="lgpt-step-number">✓</div>
+              <div class="lgpt-step-label">Contact Info</div>
+            </div>
+            <div class="lgpt-step completed">
+              <div class="lgpt-step-number">✓</div>
+              <div class="lgpt-step-label">Service Records</div>
+            </div>
+            <div class="lgpt-step active">
+              <div class="lgpt-step-number">4</div>
+              <div class="lgpt-step-label">Documents</div>
+            </div>
+          </div>
+          <div class="ugf-form">
+            <div class="text-center">
+              <span class="pension-type-badge">Normal Pensioner</span>
+            </div>
+            <form action="#" id="documentForm" method="get">
+              <div class="input-block">
+                <h4>Upload Required Documents</h4>
+                <p>Please upload clear copies of all required documents</p>
+                <div class="file-input-wrap">
+                  <div class="custom-file">
+                    <input type="file" name="national_id" class="custom-file-input" id="upload-input-1" accept="image/*,.pdf" onchange="previewFile(event, 1)" required>
+                    <label class="custom-file-label" for="upload-input-1">
+                      <img src="assets/images/cloud.png" class="upload-icon" alt="">
+                    </label>
+                    <span class="text">National ID / Passport</span>
+                  </div>
+                  <div class="custom-file">
+                    <input type="file" name="passport_photo" class="custom-file-input" id="upload-input-2" accept="image/*" onchange="previewFile(event, 2)" required>
+                    <label class="custom-file-label" for="upload-input-2">
+                      <img src="assets/images/cloud.png" class="upload-icon" alt="">
+                    </label>
+                    <span class="text">Passport Photo</span>
+                  </div>
+                  <div class="custom-file">
+                    <input type="file" name="retirement_letter" class="custom-file-input" id="upload-input-3" accept="image/*,.pdf" onchange="previewFile(event, 3)" required>
+                    <label class="custom-file-label" for="upload-input-3">
+                      <img src="assets/images/cloud.png" class="upload-icon" alt="">
+                    </label>
+                    <span class="text">Retirement Letter</span>
+                  </div>
+                </div>
+                <div class="file-input-wrap" style="margin-top: 20px;">
+                  <div class="custom-file">
+                    <input type="file" name="service_record" class="custom-file-input" id="upload-input-4" accept="image/*,.pdf" onchange="previewFile(event, 4)">
+                    <label class="custom-file-label" for="upload-input-4">
+                      <img src="assets/images/cloud.png" class="upload-icon" alt="">
+                    </label>
+                    <span class="text">Service Record (Optional)</span>
+                  </div>
+                  <div class="custom-file">
+                    <input type="file" name="bank_statement" class="custom-file-input" id="upload-input-5" accept="image/*,.pdf" onchange="previewFile(event, 5)">
+                    <label class="custom-file-label" for="upload-input-5">
+                      <img src="assets/images/cloud.png" class="upload-icon" alt="">
+                    </label>
+                    <span class="text">Bank Statement (Optional)</span>
+                  </div>
+                  <div class="custom-file">
+                    <input type="file" name="other_doc" class="custom-file-input" id="upload-input-6" accept="image/*,.pdf" onchange="previewFile(event, 6)">
+                    <label class="custom-file-label" for="upload-input-6">
+                      <img src="assets/images/cloud.png" class="upload-icon" alt="">
+                    </label>
+                    <span class="text">Other Document (Optional)</span>
+                  </div>
+                </div>
+                <div class="conditions" style="margin-top: 25px;">
+                  <ul>
+                    <li class="complete">Accepted formats: JPEG, PNG, PDF (Max: 2MB each)</li>
+                    <li>All documents must be clear and legible</li>
+                    <li>Documents must be valid and not expired</li>
+                    <li>Passport photo must be recent (within 6 months)</li>
+                    <li>Ensure all text is readable</li>
+                  </ul>
+                </div>
+              </div>
+              <button type="submit" class="btn">Submit Application &nbsp; ✓</button>
+              <a href="kyc3.html" class="back-to-prev"><img src="assets/images/arrow-left-grey.png" alt=""> Back to Previous</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const pensionType = urlParams.get('type') || 'normal';
+    function previewFile(event, index) {
+      const file = event.target.files[0];
+      if (file) {
+        const label = document.querySelector(`label[for="upload-input-${index}"]`);
+        label.innerHTML = `<span style="color: #38a169; font-size: 32px;">✓</span>`;
+      }
+    }
+    document.getElementById("documentForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const saved = JSON.parse(localStorage.getItem("lgptFormData")) || {};
+      saved.documents_uploaded = true;
+      localStorage.setItem("lgptFormData", JSON.stringify(saved));
+      window.location.href = "kyc-complete.html?type=" + pensionType;
+    });
+  </script>
+</body>
+</html>

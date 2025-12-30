@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Personal Details | Ondo State LGPT</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/line-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/countrySelect.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/kyc-1.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/lgpt-forms.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/Flag_of_Ondo_State.png">
+</head>
+<body>
+  <div class="ugf-nav">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="navigation">
+            <div class="logo">
+              <img src="images/Flag_of_Ondo_State.png" class="img-fluid" alt="LGPT Logo" style="height: 40px;">
+              <a href="index.html"><span>ONDO STATE LGPT</span></a>
+            </div>
+            <div class="nav-btns">
+              <a href="index.html" class="back"><span class="text">← Back to Home</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ugf-bg ufg-main-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2 p-sm-0">
+          <div class="lgpt-progress-steps">
+            <div class="lgpt-step active">
+              <div class="lgpt-step-number">1</div>
+              <div class="lgpt-step-label">Personal Details</div>
+            </div>
+            <div class="lgpt-step">
+              <div class="lgpt-step-number">2</div>
+              <div class="lgpt-step-label">Contact Info</div>
+            </div>
+            <div class="lgpt-step">
+              <div class="lgpt-step-number">3</div>
+              <div class="lgpt-step-label">Service Records</div>
+            </div>
+            <div class="lgpt-step">
+              <div class="lgpt-step-number">4</div>
+              <div class="lgpt-step-label">Documents</div>
+            </div>
+          </div>
+          <div class="ugf-form">
+            <div class="text-center">
+              <span class="pension-type-badge" id="pensionTypeBadge">Normal Pensioner</span>
+            </div>
+            <form action="#" id="personalDetailsForm" method="get">
+              <div class="input-block">
+                <h4>Personal Information</h4>
+                <p>Please provide your personal details accurately</p>
+                <div class="row">
+                  <div class="col-md-4 p-sm-0">
+                    <div class="form-group">
+                      <label for="pensionerNumber">Pensioner Number *</label>
+                      <input type="text" name="pensioner_number" class="form-control" id="pensionerNumber" placeholder="e.g. PEN/2024/001" required>
+                    </div>
+                  </div>
+                  <div class="col-md-4 p-sm-0">
+                    <div class="form-group">
+                      <label for="firstName">First Name *</label>
+                      <input type="text" name="first_name" class="form-control" id="firstName" placeholder="e.g. Adamu" required>
+                    </div>
+                  </div>
+                  <div class="col-md-4 p-sm-0">
+                    <div class="form-group">
+                      <label for="lastName">Last Name *</label>
+                      <input type="text" name="last_name" class="form-control" id="lastName" placeholder="e.g. Ibrahim" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 p-sm-0">
+                    <div class="form-group">
+                      <label for="middleName">Middle Name</label>
+                      <input type="text" name="middle_name" class="form-control" id="middleName" placeholder="e.g. Oluwaseun">
+                    </div>
+                  </div>
+                  <div class="col-md-4 p-sm-0">
+                    <div class="form-group">
+                      <label for="dateOfBirth">Date of Birth *</label>
+                      <input type="date" name="date_of_birth" class="form-control" id="dateOfBirth" required>
+                    </div>
+                  </div>
+                  <div class="col-md-4 p-sm-0">
+                    <div class="form-group">
+                      <label for="category">Category *</label>
+                      <select class="form-control" id="category" name="category" required>
+                        <option value="">Select Category</option>
+                        <option value="civil-servant">Civil Servant</option>
+                        <option value="teacher">Teacher</option>
+                        <option value="health-worker">Health Worker</option>
+                        <option value="administrative">Administrative Staff</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="input-block">
+                <h4>Contact Details</h4>
+                <div class="row">
+                  <div class="col-md-6 p-sm-0">
+                    <div class="form-group">
+                      <label for="phoneNumber">Phone Number *</label>
+                      <input type="tel" name="phone_number" class="form-control" id="phoneNumber" placeholder="e.g. 08012345678" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6 p-sm-0">
+                    <div class="form-group">
+                      <label for="emailAddress">Email Address *</label>
+                      <input type="email" name="email_address" class="form-control" id="emailAddress" placeholder="e.g. example@gmail.com" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="permanentAddress">Permanent Home Address *</label>
+                  <textarea name="permanent_home_address" class="form-control" id="permanentAddress" rows="3" placeholder="Enter your full address" required style="height: auto;"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="nextOfKinPhone">Next of Kin Phone Number *</label>
+                  <input type="tel" name="next_of_kin_phone" class="form-control" id="nextOfKinPhone" placeholder="e.g. 08012345678" required>
+                </div>
+              </div>
+              <div class="input-block">
+                <h4>Bank Details</h4>
+                <div class="row">
+                  <div class="col-md-4 p-sm-0">
+                    <div class="form-group">
+                      <label for="bankName">Bank Name *</label>
+                      <select class="form-control" id="bankName" name="bank_name" required>
+                        <option value="">Select Bank</option>
+                        <option value="access">Access Bank</option>
+                        <option value="ecobank">Ecobank Nigeria</option>
+                        <option value="fidelity">Fidelity Bank</option>
+                        <option value="firstbank">First Bank of Nigeria</option>
+                        <option value="fcmb">First City Monument Bank (FCMB)</option>
+                        <option value="gtbank">Guaranty Trust Bank (GTBank)</option>
+                        <option value="heritage">Heritage Bank</option>
+                        <option value="keystone">Keystone Bank</option>
+                        <option value="polaris">Polaris Bank</option>
+                        <option value="providus">Providus Bank</option>
+                        <option value="stanbic">Stanbic IBTC Bank</option>
+                        <option value="standard">Standard Chartered Bank</option>
+                        <option value="sterling">Sterling Bank</option>
+                        <option value="union">Union Bank of Nigeria</option>
+                        <option value="uba">United Bank for Africa (UBA)</option>
+                        <option value="unity">Unity Bank</option>
+                        <option value="wema">Wema Bank</option>
+                        <option value="zenith">Zenith Bank</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-4 p-sm-0">
+                    <div class="form-group">
+                      <label for="accountNumber">Account Number *</label>
+                      <input type="text" name="account_number" class="form-control" id="accountNumber" placeholder="10-digit account number" pattern="[0-9]{10}" maxlength="10" required>
+                    </div>
+                  </div>
+                  <div class="col-md-4 p-sm-0">
+                    <div class="form-group">
+                      <label for="placeOfPayment">Place of Payment *</label>
+                      <select class="form-control" id="placeOfPayment" name="place_of_payment" required>
+                        <option value="">Select LGA</option>
+                        <option value="akoko-north-east">Akoko North-East</option>
+                        <option value="akoko-north-west">Akoko North-West</option>
+                        <option value="akoko-south-east">Akoko South-East</option>
+                        <option value="akoko-south-west">Akoko South-West</option>
+                        <option value="akure-north">Akure North</option>
+                        <option value="akure-south">Akure South</option>
+                        <option value="ese-odo">Ese Odo</option>
+                        <option value="idanre">Idanre</option>
+                        <option value="ifedore">Ifedore</option>
+                        <option value="ilaje">Ilaje</option>
+                        <option value="ile-oluji-okeigbo">Ile Oluji/Okeigbo</option>
+                        <option value="irele">Irele</option>
+                        <option value="odigbo">Odigbo</option>
+                        <option value="okitipupa">Okitipupa</option>
+                        <option value="ondo-east">Ondo East</option>
+                        <option value="ondo-west">Ondo West</option>
+                        <option value="ose">Ose</option>
+                        <option value="owo">Owo</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <input type="hidden" name="pension_type" id="pensionType" value="normal">
+              <button type="submit" class="btn">Continue to Contact Details &nbsp; →</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/jquery.validate.min.js"></script>
+  <script>
+    // Get pension type from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const pensionType = urlParams.get('type') || 'normal';
+    // Update badge and hidden field
+    const typeLabels = {
+      'normal': 'Normal Pensioner',
+      'local-share': 'Local Share',
+      'state-share': 'State Share',
+      'federal-share': 'Federal Share'
+    };
+    document.getElementById('pensionTypeBadge').textContent = typeLabels[pensionType] || 'Normal Pensioner';
+    document.getElementById('pensionType').value = pensionType;
+    // Adjust progress steps for share-based pensions (3 steps)
+    if (pensionType !== 'normal') {
+      document.querySelector('.lgpt-progress-steps').innerHTML = `
+        <div class="lgpt-step active">
+          <div class="lgpt-step-number">1</div>
+          <div class="lgpt-step-label">Personal Details</div>
+        </div>
+        <div class="lgpt-step">
+          <div class="lgpt-step-number">2</div>
+          <div class="lgpt-step-label">Documents</div>
+        </div>
+        <div class="lgpt-step">
+          <div class="lgpt-step-number">3</div>
+          <div class="lgpt-step-label">Confirmation</div>
+        </div>
+      `;
+    }
+    // Form submission
+    document.getElementById("personalDetailsForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const formData = {
+        pensioner_number: document.getElementById("pensionerNumber").value,
+        first_name: document.getElementById("firstName").value,
+        last_name: document.getElementById("lastName").value,
+        middle_name: document.getElementById("middleName").value,
+        date_of_birth: document.getElementById("dateOfBirth").value,
+        category: document.getElementById("category").value,
+        phone_number: document.getElementById("phoneNumber").value,
+        email_address: document.getElementById("emailAddress").value,
+        permanent_home_address: document.getElementById("permanentAddress").value,
+        next_of_kin_phone: document.getElementById("nextOfKinPhone").value,
+        bank_name: document.getElementById("bankName").value,
+        account_number: document.getElementById("accountNumber").value,
+        place_of_payment: document.getElementById("placeOfPayment").value,
+        pension_type: pensionType
+      };
+      localStorage.setItem("lgptFormData", JSON.stringify(formData));
+      // Navigate based on pension type
+      if (pensionType === 'normal') {
+        window.location.href = "kyc2.html?type=" + pensionType;
+      } else {
+        window.location.href = "kyc3.html?type=" + pensionType; // Skip to documents for share-based
+      }
+    });
+    // Load saved data
+    document.addEventListener("DOMContentLoaded", function() {
+      const saved = JSON.parse(localStorage.getItem("lgptFormData")) || {};
+      if (saved.pensioner_number) document.getElementById("pensionerNumber").value = saved.pensioner_number;
+      if (saved.first_name) document.getElementById("firstName").value = saved.first_name;
+      if (saved.last_name) document.getElementById("lastName").value = saved.last_name;
+      if (saved.middle_name) document.getElementById("middleName").value = saved.middle_name;
+      if (saved.date_of_birth) document.getElementById("dateOfBirth").value = saved.date_of_birth;
+      if (saved.category) document.getElementById("category").value = saved.category;
+      if (saved.phone_number) document.getElementById("phoneNumber").value = saved.phone_number;
+      if (saved.email_address) document.getElementById("emailAddress").value = saved.email_address;
+      if (saved.permanent_home_address) document.getElementById("permanentAddress").value = saved.permanent_home_address;
+      if (saved.next_of_kin_phone) document.getElementById("nextOfKinPhone").value = saved.next_of_kin_phone;
+      if (saved.bank_name) document.getElementById("bankName").value = saved.bank_name;
+      if (saved.account_number) document.getElementById("accountNumber").value = saved.account_number;
+      if (saved.place_of_payment) document.getElementById("placeOfPayment").value = saved.place_of_payment;
+    });
+  </script>
+</body>
+</html>
