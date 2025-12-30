@@ -643,3 +643,26 @@ input:valid:not(:placeholder-shown) {
     font-size: 12px;
     margin-top: 4px;
 }
+
+/* Required field asterisk styling */
+label {
+    color: var(--text-primary);
+}
+
+/* Make asterisks red */
+.form-group label,
+.input-block label {
+    color: #1a202c;
+}
+
+/* Target asterisks in labels - wrap them in span or use CSS */
+label::after {
+    content: '';
+}
+
+/* Alternative: Style using attribute selector for required inputs */
+.form-group:has(input[required]) label::after,
+.form-group:has(select[required]) label::after,
+.form-group:has(textarea[required]) label::after {
+    color: #e53e3e;
+}

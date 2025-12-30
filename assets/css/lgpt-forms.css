@@ -184,3 +184,8 @@ body {
     font-weight: 600;
     margin-bottom: 16px;
 }
+/* Red asterisk for required fields */
+.required-asterisk {
+    color: #e53e3e;
+    font-weight: 600;
+}
