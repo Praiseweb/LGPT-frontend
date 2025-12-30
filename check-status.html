@@ -161,13 +161,8 @@
             <p class="status-subtitle">Enter your File ID or Phone Number to check your application progress</p>
             <form id="statusForm">
                <div class="form-group">
-                  <label for="referenceNumber">File ID</label>
-                  <input type="text" id="referenceNumber" name="file_id" placeholder="">
-               </div>
-               <div class="or-divider">OR</div>
-               <div class="form-group">
-                  <label for="phoneNumber">Phone Number</label>
-                  <input type="tel" id="phoneNumber" name="phone_number" placeholder="" pattern="[0-9]{11}" maxlength="11" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                  <label for="searchInput">File ID / Phone Number</label>
+                  <input type="text" id="searchInput" name="search_input" placeholder="">
                </div>
                <button type="submit" class="btn-check-status">Check Status →</button>
             </form>
@@ -185,19 +180,17 @@
    <script>
       document.getElementById('statusForm').addEventListener('submit', function(e) {
          e.preventDefault();
-         const refNum = document.getElementById('referenceNumber').value.trim();
-         const phone = document.getElementById('phoneNumber').value.trim();
+         const searchValue = document.getElementById('searchInput').value.trim();
          const resultBox = document.getElementById('resultBox');
          const resultTitle = document.getElementById('resultTitle');
          const resultMessage = document.getElementById('resultMessage');
-         if (!refNum && !phone) {
+         if (!searchValue) {
             resultBox.className = 'result-box error';
             resultBox.style.display = 'block';
             resultTitle.textContent = 'Error';
-            resultMessage.textContent = 'Please enter either a Reference Number or Phone Number.';
+            resultMessage.textContent = 'Please enter your File ID or Phone Number.';
             return;
          }
-         // Simulate status check (in production, this would call an API)
          resultBox.className = 'result-box success';
          resultBox.style.display = 'block';
          resultTitle.textContent = 'Application Found';
