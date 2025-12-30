@@ -71,13 +71,13 @@
                   <div class="col-md-4 p-sm-0">
                     <div class="form-group">
                       <label for="firstName">First Name *</label>
-                      <input type="text" name="first_name" class="form-control" id="firstName" placeholder="e.g. Adamu" required>
+                      <input type="text" name="first_name" class="form-control" id="firstName" placeholder="e.g. Adamu" pattern="[A-Za-z\s]+" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')" required>
                     </div>
                   </div>
                   <div class="col-md-4 p-sm-0">
                     <div class="form-group">
                       <label for="lastName">Last Name *</label>
-                      <input type="text" name="last_name" class="form-control" id="lastName" placeholder="e.g. Ibrahim" required>
+                      <input type="text" name="last_name" class="form-control" id="lastName" placeholder="e.g. Ibrahim" pattern="[A-Za-z\s]+" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')" required>
                     </div>
                   </div>
                 </div>
@@ -85,7 +85,7 @@
                   <div class="col-md-4 p-sm-0">
                     <div class="form-group">
                       <label for="middleName">Middle Name</label>
-                      <input type="text" name="middle_name" class="form-control" id="middleName" placeholder="e.g. Oluwaseun">
+                      <input type="text" name="middle_name" class="form-control" id="middleName" placeholder="e.g. Oluwaseun" pattern="[A-Za-z\s]*" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
                     </div>
                   </div>
                   <div class="col-md-4 p-sm-0">
