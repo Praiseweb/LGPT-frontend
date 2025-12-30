@@ -138,7 +138,7 @@
                     <div class="col-md-6 p-sm-0">
                       <div class="form-group">
                         <label for="terminalSalary">Terminal Salary (₦) <span class="required-asterisk">*</span></label>
-                        <input type="number" name="terminal_salary" class="form-control" id="terminalSalary" placeholder="e.g. 150000" required>
+                        <input type="text" name="terminal_salary" class="form-control" id="terminalSalary" placeholder="e.g. 150000" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
                       </div>
                     </div>
                   </div>
@@ -169,20 +169,20 @@
                   <div class="row">
                     <div class="col-md-4 p-sm-0">
                       <div class="form-group">
-                        <label for="leaveYears">Years</label>
-                        <input type="number" name="leave_without_pay_years" class="form-control" id="leaveYears" placeholder="0" min="0" max="45">
+                        <label for="leaveYears">Years <span class="required-asterisk">*</span></label>
+                        <input type="number" name="leave_without_pay_years" class="form-control" id="leaveYears" placeholder="0" min="0" max="45" required>
                       </div>
                     </div>
                     <div class="col-md-4 p-sm-0">
                       <div class="form-group">
-                        <label for="leaveMonths">Months</label>
-                        <input type="number" name="leave_without_pay_months" class="form-control" id="leaveMonths" placeholder="0" min="0" max="11">
+                        <label for="leaveMonths">Months <span class="required-asterisk">*</span></label>
+                        <input type="number" name="leave_without_pay_months" class="form-control" id="leaveMonths" placeholder="0" min="0" max="11" required>
                       </div>
                     </div>
                     <div class="col-md-4 p-sm-0">
                       <div class="form-group">
-                        <label for="leaveDays">Days</label>
-                        <input type="number" name="leave_without_pay_days" class="form-control" id="leaveDays" placeholder="0" min="0" max="30">
+                        <label for="leaveDays">Days <span class="required-asterisk">*</span></label>
+                        <input type="number" name="leave_without_pay_days" class="form-control" id="leaveDays" placeholder="0" min="0" max="30" required>
                       </div>
                     </div>
                   </div>
