@@ -5,20 +5,17 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <title>Check Application Status | Ondo State LGPT</title>
-   <meta name="description" content="Check the status of your pension application">
+   <meta name="description" content="Check your pension application status at Ondo State LGPT">
    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
    <link rel="stylesheet" type="text/css" href="css/style.css">
    <link rel="stylesheet" href="css/responsive.css">
-   <link rel="icon" href="images/Flag_of_Ondo_State.png" type="image/gif" />
+   <link rel="icon" href="images/Flag_of_Ondo_State.png">
    <link rel="stylesheet" href="css/custom.css">
    <style>
       .status-hero {
          background: linear-gradient(135deg, #f8f5f0 0%, #fff 100%);
+         padding: 100px 0 80px;
          min-height: 100vh;
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         padding: 40px 20px;
       }
       .status-card {
          background: #fff;
@@ -26,7 +23,7 @@
          box-shadow: 0 20px 60px rgba(0,0,0,0.08);
          padding: 48px;
          max-width: 500px;
-         width: 100%;
+         margin: 0 auto;
       }
       .status-title {
          font-size: 28px;
@@ -47,39 +44,22 @@
          margin-bottom: 8px;
          display: block;
       }
-      .form-control {
+      .form-group input {
+         width: 100%;
          padding: 14px 16px;
          border: 2px solid #e2e8f0;
          border-radius: 10px;
-         font-size: 16px;
-         transition: all 0.3s ease;
+         font-size: 15px;
+         transition: border-color 0.3s;
       }
-      .form-control:focus {
+      .form-group input:focus {
+         outline: none;
          border-color: #e65c00;
          box-shadow: 0 0 0 3px rgba(230, 92, 0, 0.15);
       }
-      .btn-check {
-         width: 100%;
-         background: linear-gradient(135deg, #e65c00 0%, #cc5200 100%);
-         color: #fff;
-         padding: 16px;
-         border: none;
-         border-radius: 10px;
-         font-size: 16px;
-         font-weight: 600;
-         cursor: pointer;
-         transition: all 0.3s ease;
-         margin-top: 16px;
-      }
-      .btn-check:hover {
-         background: #ff7a1a;
-         transform: translateY(-2px);
-         box-shadow: 0 8px 24px rgba(230, 92, 0, 0.3);
-      }
       .or-divider {
          text-align: center;
-         color: #718096;
-         font-size: 14px;
+         color: #a0aec0;
          margin: 20px 0;
          position: relative;
       }
@@ -94,37 +74,54 @@
       }
       .or-divider::before { left: 0; }
       .or-divider::after { right: 0; }
+      .btn-check-status {
+         width: 100%;
+         background: linear-gradient(135deg, #e65c00 0%, #cc5200 100%);
+         color: #fff;
+         padding: 16px;
+         border: none;
+         border-radius: 10px;
+         font-size: 16px;
+         font-weight: 600;
+         cursor: pointer;
+         transition: all 0.3s;
+         margin-top: 24px;
+      }
+      .btn-check-status:hover {
+         transform: translateY(-2px);
+         box-shadow: 0 8px 24px rgba(230, 92, 0, 0.35);
+      }
       .back-link {
          display: block;
          text-align: center;
          margin-top: 24px;
          color: #718096;
-         font-size: 14px;
+         font-weight: 500;
+         transition: color 0.3s;
       }
       .back-link:hover {
          color: #e65c00;
       }
       .result-box {
-         display: none;
-         background: #f8f5f0;
-         border-radius: 12px;
+         margin-top: 32px;
          padding: 24px;
-         margin-top: 24px;
-         text-align: center;
+         border-radius: 12px;
+         display: none;
       }
-      .result-box.show {
-         display: block;
+      .result-box.success {
+         background: #f0fff4;
+         border: 2px solid #38a169;
       }
-      .status-badge {
-         display: inline-block;
-         padding: 8px 20px;
-         border-radius: 20px;
+      .result-box.error {
+         background: #fff5f5;
+         border: 2px solid #e53e3e;
+      }
+      .result-box h4 {
+         margin: 0 0 8px 0;
          font-weight: 600;
-         font-size: 14px;
       }
-      .status-pending { background: #fff4eb; color: #e65c00; }
-      .status-approved { background: #e6ffed; color: #38a169; }
-      .status-review { background: #ebf5ff; color: #3182ce; }
+      .result-box.success h4 { color: #38a169; }
+      .result-box.error h4 { color: #e53e3e; }
    </style>
 </head>
 <body>
@@ -136,7 +133,6 @@
          </div>
       </div>
    </div>
-
    <div class="header_section header_bg">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
          <div class="logo">
@@ -148,77 +144,70 @@
                </span>
             </a>
          </div>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+         </button>
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-               <li class="nav-item"><a class="nav-link" href="index.html">← Back to Home</a></li>
+               <li class="nav-item"><a class="nav-link" href="apply.html">← Back to Apply</a></li>
             </ul>
          </div>
       </nav>
    </div>
-
    <section class="status-hero">
-      <div class="status-card">
-         <h1 class="status-title">Check Application Status</h1>
-         <p class="status-subtitle">Enter your reference number or phone number to check your application progress</p>
-         
-         <form id="statusForm">
-            <div class="form-group">
-               <label for="refNumber">Reference Number</label>
-               <input type="text" class="form-control" id="refNumber" placeholder="e.g. LGPT-2024-123456">
+      <div class="container">
+         <div class="status-card">
+            <h1 class="status-title">Check Application Status</h1>
+            <p class="status-subtitle">Enter your Reference Number or Phone Number to check your application progress</p>
+            <form id="statusForm">
+               <div class="form-group">
+                  <label for="referenceNumber">Reference Number</label>
+                  <input type="text" id="referenceNumber" name="reference_number" placeholder="e.g. LGPT-2024-123456">
+               </div>
+               <div class="or-divider">OR</div>
+               <div class="form-group">
+                  <label for="phoneNumber">Phone Number</label>
+                  <input type="tel" id="phoneNumber" name="phone_number" placeholder="e.g. 08012345678" pattern="[0-9]{11}" maxlength="11" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+               </div>
+               <button type="submit" class="btn-check-status">Check Status →</button>
+            </form>
+            <a href="apply.html" class="back-link">← Back to Application</a>
+            <div id="resultBox" class="result-box">
+               <h4 id="resultTitle"></h4>
+               <p id="resultMessage" style="margin: 0; color: #4a5568;"></p>
             </div>
-            
-            <div class="or-divider">OR</div>
-            
-            <div class="form-group">
-               <label for="phoneNumber">Phone Number</label>
-               <input type="tel" class="form-control" id="phoneNumber" placeholder="e.g. 08012345678" pattern="[0-9]{11}" maxlength="11" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
-            </div>
-            
-            <button type="submit" class="btn-check">Check Status</button>
-         </form>
-
-         <div class="result-box" id="resultBox">
-            <p style="margin-bottom: 12px; color: #718096;">Application Status:</p>
-            <span class="status-badge status-pending" id="statusBadge">Pending Review</span>
-            <p style="margin-top: 16px; font-size: 14px; color: #4a5568;" id="statusMessage">
-               Your application is currently being processed. Please check back in 3-5 working days.
-            </p>
          </div>
-
-         <a href="index.html" class="back-link">← Back to Homepage</a>
       </div>
    </section>
-
    <script src="js/jquery.min.js"></script>
    <script src="js/popper.min.js"></script>
    <script src="js/bootstrap.bundle.min.js"></script>
    <script>
       document.getElementById('statusForm').addEventListener('submit', function(e) {
          e.preventDefault();
-         const refNumber = document.getElementById('refNumber').value;
-         const phoneNumber = document.getElementById('phoneNumber').value;
-         
-         if (!refNumber && !phoneNumber) {
-            alert('Please enter either a reference number or phone number');
+         const refNum = document.getElementById('referenceNumber').value.trim();
+         const phone = document.getElementById('phoneNumber').value.trim();
+         const resultBox = document.getElementById('resultBox');
+         const resultTitle = document.getElementById('resultTitle');
+         const resultMessage = document.getElementById('resultMessage');
+         if (!refNum && !phone) {
+            resultBox.className = 'result-box error';
+            resultBox.style.display = 'block';
+            resultTitle.textContent = 'Error';
+            resultMessage.textContent = 'Please enter either a Reference Number or Phone Number.';
             return;
          }
-         
-         // Show result (demo - in production this would call an API)
-         document.getElementById('resultBox').classList.add('show');
-         
-         // Random status for demo
-         const statuses = ['pending', 'review', 'approved'];
-         const messages = {
-            'pending': 'Your application is being processed. Please check back in 3-5 working days.',
-            'review': 'Your application is under review. You may be contacted for additional documents.',
-            'approved': 'Congratulations! Your application has been approved. Payment will be processed soon.'
-         };
-         const status = statuses[Math.floor(Math.random() * statuses.length)];
-         
-         const badge = document.getElementById('statusBadge');
-         badge.className = 'status-badge status-' + status;
-         badge.textContent = status === 'pending' ? 'Pending' : status === 'review' ? 'Under Review' : 'Approved';
-         document.getElementById('statusMessage').textContent = messages[status];
+         // Simulate status check (in production, this would call an API)
+         resultBox.className = 'result-box success';
+         resultBox.style.display = 'block';
+         resultTitle.textContent = 'Application Found';
+         resultMessage.innerHTML = `
+            <strong>Status:</strong> Under Review<br>
+            <strong>Submitted:</strong> ${new Date().toLocaleDateString()}<br>
+            <strong>Expected Completion:</strong> 7-14 working days<br>
+            <br>
+            <em style="color: #718096;">For more details, please contact our helpline.</em>
+         `;
       });
    </script>
 </body>
