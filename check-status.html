@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Check Application Status | Ondo State LGPT</title>
+   <meta name="description" content="Check the status of your pension application">
+   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+   <link rel="stylesheet" href="css/responsive.css">
+   <link rel="icon" href="images/Flag_of_Ondo_State.png" type="image/gif" />
+   <link rel="stylesheet" href="css/custom.css">
+   <style>
+      .status-hero {
+         background: linear-gradient(135deg, #f8f5f0 0%, #fff 100%);
+         min-height: 100vh;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         padding: 40px 20px;
+      }
+      .status-card {
+         background: #fff;
+         border-radius: 24px;
+         box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+         padding: 48px;
+         max-width: 500px;
+         width: 100%;
+      }
+      .status-title {
+         font-size: 28px;
+         font-weight: 700;
+         color: #e65c00;
+         text-align: center;
+         margin-bottom: 8px;
+      }
+      .status-subtitle {
+         font-size: 15px;
+         color: #718096;
+         text-align: center;
+         margin-bottom: 32px;
+      }
+      .form-group label {
+         font-weight: 600;
+         color: #1a202c;
+         margin-bottom: 8px;
+         display: block;
+      }
+      .form-control {
+         padding: 14px 16px;
+         border: 2px solid #e2e8f0;
+         border-radius: 10px;
+         font-size: 16px;
+         transition: all 0.3s ease;
+      }
+      .form-control:focus {
+         border-color: #e65c00;
+         box-shadow: 0 0 0 3px rgba(230, 92, 0, 0.15);
+      }
+      .btn-check {
+         width: 100%;
+         background: linear-gradient(135deg, #e65c00 0%, #cc5200 100%);
+         color: #fff;
+         padding: 16px;
+         border: none;
+         border-radius: 10px;
+         font-size: 16px;
+         font-weight: 600;
+         cursor: pointer;
+         transition: all 0.3s ease;
+         margin-top: 16px;
+      }
+      .btn-check:hover {
+         background: #ff7a1a;
+         transform: translateY(-2px);
+         box-shadow: 0 8px 24px rgba(230, 92, 0, 0.3);
+      }
+      .or-divider {
+         text-align: center;
+         color: #718096;
+         font-size: 14px;
+         margin: 20px 0;
+         position: relative;
+      }
+      .or-divider::before,
+      .or-divider::after {
+         content: '';
+         position: absolute;
+         top: 50%;
+         width: 40%;
+         height: 1px;
+         background: #e2e8f0;
+      }
+      .or-divider::before { left: 0; }
+      .or-divider::after { right: 0; }
+      .back-link {
+         display: block;
+         text-align: center;
+         margin-top: 24px;
+         color: #718096;
+         font-size: 14px;
+      }
+      .back-link:hover {
+         color: #e65c00;
+      }
+      .result-box {
+         display: none;
+         background: #f8f5f0;
+         border-radius: 12px;
+         padding: 24px;
+         margin-top: 24px;
+         text-align: center;
+      }
+      .result-box.show {
+         display: block;
+      }
+      .status-badge {
+         display: inline-block;
+         padding: 8px 20px;
+         border-radius: 20px;
+         font-weight: 600;
+         font-size: 14px;
+      }
+      .status-pending { background: #fff4eb; color: #e65c00; }
+      .status-approved { background: #e6ffed; color: #38a169; }
+      .status-review { background: #ebf5ff; color: #3182ce; }
+   </style>
+</head>
+<body>
+   <div class="top-bar">
+      <div class="container">
+         <div class="d-flex justify-content-between align-items-center">
+            <span>Official Ondo State Government Portal</span>
+            <a href="tel:0800-LGPT-HELP">📞 Helpline: 0800-LGPT-HELP</a>
+         </div>
+      </div>
+   </div>
+
+   <div class="header_section header_bg">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <div class="logo">
+            <a href="index.html">
+               <img src="images/Flag_of_Ondo_State.png" alt="Ondo State LGPT">
+               <span class="logo-text d-none d-md-inline">
+                  Ondo State LGPT
+                  <span>Local Government Pension Trust</span>
+               </span>
+            </a>
+         </div>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+               <li class="nav-item"><a class="nav-link" href="index.html">← Back to Home</a></li>
+            </ul>
+         </div>
+      </nav>
+   </div>
+
+   <section class="status-hero">
+      <div class="status-card">
+         <h1 class="status-title">Check Application Status</h1>
+         <p class="status-subtitle">Enter your reference number or phone number to check your application progress</p>
+         
+         <form id="statusForm">
+            <div class="form-group">
+               <label for="refNumber">Reference Number</label>
+               <input type="text" class="form-control" id="refNumber" placeholder="e.g. LGPT-2024-123456">
+            </div>
+            
+            <div class="or-divider">OR</div>
+            
+            <div class="form-group">
+               <label for="phoneNumber">Phone Number</label>
+               <input type="tel" class="form-control" id="phoneNumber" placeholder="e.g. 08012345678" pattern="[0-9]{11}" maxlength="11" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            </div>
+            
+            <button type="submit" class="btn-check">Check Status</button>
+         </form>
+
+         <div class="result-box" id="resultBox">
+            <p style="margin-bottom: 12px; color: #718096;">Application Status:</p>
+            <span class="status-badge status-pending" id="statusBadge">Pending Review</span>
+            <p style="margin-top: 16px; font-size: 14px; color: #4a5568;" id="statusMessage">
+               Your application is currently being processed. Please check back in 3-5 working days.
+            </p>
+         </div>
+
+         <a href="index.html" class="back-link">← Back to Homepage</a>
+      </div>
+   </section>
+
+   <script src="js/jquery.min.js"></script>
+   <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script>
+      document.getElementById('statusForm').addEventListener('submit', function(e) {
+         e.preventDefault();
+         const refNumber = document.getElementById('refNumber').value;
+         const phoneNumber = document.getElementById('phoneNumber').value;
+         
+         if (!refNumber && !phoneNumber) {
+            alert('Please enter either a reference number or phone number');
+            return;
+         }
+         
+         // Show result (demo - in production this would call an API)
+         document.getElementById('resultBox').classList.add('show');
+         
+         // Random status for demo
+         const statuses = ['pending', 'review', 'approved'];
+         const messages = {
+            'pending': 'Your application is being processed. Please check back in 3-5 working days.',
+            'review': 'Your application is under review. You may be contacted for additional documents.',
+            'approved': 'Congratulations! Your application has been approved. Payment will be processed soon.'
+         };
+         const status = statuses[Math.floor(Math.random() * statuses.length)];
+         
+         const badge = document.getElementById('statusBadge');
+         badge.className = 'status-badge status-' + status;
+         badge.textContent = status === 'pending' ? 'Pending' : status === 'review' ? 'Under Review' : 'Approved';
+         document.getElementById('statusMessage').textContent = messages[status];
+      });
+   </script>
+</body>
+</html>
